@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int T;
+    cin >> T;
+    int i;
+    for (i=1; i<=T; i++){
+        int x,j,c=0;
+        cin >> x;
+        int y=x;
+        while(y != 0)
+        {
+            y /= 10;
+            c=c+1;
+        }
+        int sum=x%10;
+        x/=10;
+        for (j=1; j<=c-1; j++ ){
+            sum =sum* (x%10);
+            x=x/10;
+            
+        }
+        cout << sum << endl;
+    }
+    return 0;
+}
